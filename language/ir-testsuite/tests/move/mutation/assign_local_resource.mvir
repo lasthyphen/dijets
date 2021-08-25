@@ -1,0 +1,15 @@
+// check: WRITEREF_WITHOUT_DROP_ABILITY
+
+import 0x1.XUS;
+import 0x1.Dijets;
+main() {
+    let resource1: Dijets.Dijets<XUS.XUS>;
+    let resource_ref: &mut Dijets.Dijets<XUS.XUS>;
+    let resource2: Dijets.Dijets<XUS.XUS>;
+
+    resource1 = Dijets.zero<XUS.XUS>();
+    resource_ref  = &mut resource1;
+    resource2 = Dijets.zero<XUS.XUS>();
+    *move(resource_ref) = move(resource2);
+    return;
+}

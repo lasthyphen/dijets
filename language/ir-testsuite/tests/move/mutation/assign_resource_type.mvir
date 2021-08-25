@@ -1,0 +1,22 @@
+module A {
+import 0x1.XUS;
+    import 0x1.Dijets;
+    struct T {fr: Dijets.Dijets<XUS.XUS>}
+
+    public new(y: Dijets.Dijets<XUS.XUS>): Self.T {
+        return T{fr: move(y)};
+    }
+    public destroy(a: Self.T) {
+        let fr: Dijets.Dijets<XUS.XUS>;
+        T { fr } = move(a);
+        Dijets.destroy_zero<XUS.XUS>(move(fr));
+        return;
+    }
+    public t(this: &mut Self.T, y: Dijets.Dijets<XUS.XUS>) {
+        let x: &mut Dijets.Dijets<XUS.XUS>;
+        x = &mut move(this).fr;
+        *move(x) = move(y);
+        return;
+    }
+}
+// check: WRITEREF_WITHOUT_DROP_ABILITY

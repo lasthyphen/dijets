@@ -1,0 +1,17 @@
+//! account: Alice, 1000000
+//! account: Bob, 1000000
+
+//! sender: Alice
+import 0x1.DijetsAccount;
+import 0x1.XUS;
+import 0x1.Dijets;
+
+main(account: signer) {
+    let with_cap: DijetsAccount.WithdrawCapability;
+
+    with_cap = DijetsAccount.extract_withdraw_capability(&account);
+    DijetsAccount.pay_from<XUS.XUS>(&with_cap, {{bob}}, 42, h"", h"");
+    DijetsAccount.restore_withdraw_capability(move(with_cap));
+
+    return;
+}

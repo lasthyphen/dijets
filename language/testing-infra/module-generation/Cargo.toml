@@ -1,0 +1,24 @@
+[package]
+name = "module-generation"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets binary module generation"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+rand = "0.8.3"
+
+bytecode-verifier = { path = "../../bytecode-verifier" }
+ir-to-bytecode = { path = "../../compiler/ir-to-bytecode" }
+move-core-types = { path = "../../move-core/types" }
+move-ir-types = { path = "../../move-ir/types" }
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+move-binary-format = { path = "../../move-binary-format" }
+move-symbol-pool = { path = "../../move-symbol-pool" }
+
+[features]
+default = []

@@ -1,0 +1,30 @@
+module A {
+import 0x1.XUS;
+    import 0x1.Dijets;
+    struct A { c: Dijets.Dijets<XUS.XUS> }
+    public new(c: Dijets.Dijets<XUS.XUS>): Self.A {
+        return A { c: move(c) };
+    }
+    public destroy_a(a: Self.A) {
+        let c: Dijets.Dijets<XUS.XUS>;
+        A { c } = move(a);
+        Dijets.destroy_zero<XUS.XUS>(move(c));
+        return;
+    }
+}
+
+//! new-transaction
+
+import {{default}}.A;
+import 0x1.XUS;
+import 0x1.Dijets;
+
+main() {
+    let zero_resource: Dijets.Dijets<XUS.XUS>;
+    let s: A.A;
+    zero_resource = Dijets.zero<XUS.XUS>();
+    s = A.new(move(zero_resource));
+    A.destroy_a(move(s));
+
+    return;
+}

@@ -1,0 +1,34 @@
+// check: UNSAFE_RET_UNUSED_VALUES_WITHOUT_DROP
+
+module A {
+import 0x1.XUS;
+    import 0x1.Dijets;
+
+    struct T{g: Dijets.Dijets<XUS.XUS>}
+
+    public new(g: Dijets.Dijets<XUS.XUS>): Self.T {
+        return T{g: move(g)};
+    }
+
+    public destroy(a: Self.T) {
+        let c: Dijets.Dijets<XUS.XUS>;
+        T{g: c} = move(a);
+        Dijets.destroy_zero<XUS.XUS>(move(c));
+        return;
+    }
+}
+
+//! new-transaction
+
+import {{default}}.A;
+import 0x1.XUS;
+import 0x1.Dijets;
+
+main() {
+    let zero_resource: Dijets.Dijets<XUS.XUS>;
+    let s: A.T;
+    zero_resource = Dijets.zero<XUS.XUS>();
+    s = A.new(move(zero_resource));
+
+    return;
+}

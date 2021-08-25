@@ -1,0 +1,63 @@
+//! account: alice, 900000
+//! account: bob, 900000
+
+// Alice sends 200 Dijets Coins to Bob
+//! sender: alice
+//! args: {{bob}}
+//! gas-price: 0
+
+import 0x1.DijetsAccount;
+import 0x1.XUS;
+import 0x1.Dijets;
+
+main(account: signer, receiver: address) {
+    let coins: Dijets.Dijets<XUS.XUS>;
+    let with_cap: DijetsAccount.WithdrawCapability;
+
+    with_cap = DijetsAccount.extract_withdraw_capability(&account);
+    DijetsAccount.pay_from<XUS.XUS>(&with_cap, move(receiver), 200, h"", h"");
+    DijetsAccount.restore_withdraw_capability(move(with_cap));
+
+    return;
+}
+
+
+
+// Alice checks that her balance is less than 999800 Dijets Coins. (200 + gas)
+//! new-transaction
+//! sender: alice
+
+import 0x1.DijetsAccount;
+import 0x1.XUS;
+import 0x1.Signer;
+
+main(account: signer) {
+    let balance: u64;
+    let sender: address;
+
+    sender = Signer.address_of(&account);
+    balance = DijetsAccount.balance<XUS.XUS>(move(sender));
+    assert(move(balance) <= 999800, 42);
+
+    return;
+}
+
+
+
+// Bob checks that he has 90200 Dijets Coins
+//! new-transaction
+//! sender: bob
+import 0x1.DijetsAccount;
+import 0x1.XUS;
+import 0x1.Signer;
+
+main(account: signer) {
+    let balance: u64;
+    let sender: address;
+
+    sender = Signer.address_of(&account);
+    balance = DijetsAccount.balance<XUS.XUS>(move(sender));
+    assert(move(balance) == 900200, 42);
+
+    return;
+}

@@ -1,0 +1,47 @@
+module MoneyHolder {
+        import 0x1.XUS;
+        import 0x1.Dijets;
+
+        struct T { money: Dijets.Dijets<XUS.XUS> }
+
+        public new(m: Dijets.Dijets<XUS.XUS>): Self.T {
+            return T{ money: move(m) };
+        }
+
+        public value(this :&Self.T): u64 {
+            let ref: &Dijets.Dijets<XUS.XUS>;
+            let val: u64;
+            ref = &copy(this).money;
+            val = Dijets.value<XUS.XUS>(move(ref));
+            _ = move(this);
+            return move(val);
+        }
+
+        public destroy_t(t: Self.T) {
+            let money: Dijets.Dijets<XUS.XUS>;
+            T{ money } = move(t);
+            Dijets.destroy_zero<XUS.XUS>(move(money));
+            return;
+        }
+}
+
+//! new-transaction
+
+import {{default}}.MoneyHolder;
+import 0x1.XUS;
+import 0x1.Dijets;
+
+main() {
+    let coin: Dijets.Dijets<XUS.XUS>;
+    let money_holder: MoneyHolder.T;
+    let money_holder_ref: &MoneyHolder.T;
+    let value: u64;
+    coin = Dijets.zero<XUS.XUS>();
+    money_holder = MoneyHolder.new(move(coin));
+    money_holder_ref = &money_holder;
+    value = MoneyHolder.value(move(money_holder_ref));
+    assert(copy(value) == 0, 42);
+    MoneyHolder.destroy_t(move(money_holder));
+
+    return;
+}
