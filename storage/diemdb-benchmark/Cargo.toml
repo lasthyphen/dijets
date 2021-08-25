@@ -1,0 +1,30 @@
+[package]
+name = "dijetsdb-benchmark"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "DijetsDb benchmark"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+byteorder = "1.4.3"
+indicatif = "0.15.0"
+itertools = { version = "0.10.0", default-features = false }
+rand = "0.8.3"
+structopt = "0.3.21"
+
+dijetsdb = { path = "../dijetsdb" }
+dijets-crypto = { path = "../../crypto/crypto" }
+dijets-jellyfish-merkle = { path = "../jellyfish-merkle" }
+dijets-config = { path = "../../config" }
+dijets-types = { path = "../../types" }
+dijets-workspace-hack = { path = "../../common/workspace-hack" }
+storage-interface = { path = "../storage-interface" }
+
+[features]
+default = []
+fuzzing = ["dijets-types/fuzzing"]

@@ -1,0 +1,23 @@
+[package]
+name = "compatibility-test"
+version = "0.0.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "compat tests"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+dijets-sdk = { path = "../../sdk" }
+forge = { path = "../forge" }
+rand = "0.8.3"
+tokio = { version = "1.8.1", features = ["full"] }
+dijets-logger = { path = "../../common/logger" }
+dijets-workspace-hack = { path = "../../common/workspace-hack" }
+
+[[test]]
+name = "forge-compatibility"
+harness = false

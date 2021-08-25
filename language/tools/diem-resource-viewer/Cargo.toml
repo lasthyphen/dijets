@@ -1,0 +1,19 @@
+[package]
+name = "dijets-resource-viewer"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets resource viewer"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+resource-viewer = { path = "../resource-viewer" }
+dijets-types = { path = "../../../types"  }
+move-core-types = { path = "../../move-core/types" }
+move-binary-format = { path = "../../move-binary-format" }
+
+anyhow = "1.0.38"

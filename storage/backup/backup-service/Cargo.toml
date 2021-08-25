@@ -1,0 +1,38 @@
+[package]
+name = "backup-service"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+bytes = "1.0.1"
+futures = "0.3.12"
+hyper = "0.14.4"
+once_cell = "1.7.2"
+serde = { version = "1.0.124", default-features = false }
+tokio = { version = "1.8.1", features = ["full"] }
+warp = "0.3.0"
+
+bcs = "0.1.2"
+dijets-crypto = { path = "../../../crypto/crypto" }
+dijets-logger = { path = "../../../common/logger" }
+dijets-metrics = { path = "../../../common/metrics" }
+dijets-types = { path = "../../../types" }
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+dijetsdb = { path = "../../dijetsdb" }
+storage-interface = { path = "../../storage-interface" }
+
+[dev-dependencies]
+dijetsdb = { path = "../../dijetsdb", features = ["fuzzing"] }
+dijets-config = { path = "../../../config" }
+dijets-temppath = { path = "../../../common/temppath" }
+
+reqwest = { version = "0.11.2", features = ["blocking", "json"], default_features = false }
+
+[features]
+fuzzing = ["dijetsdb/fuzzing"]

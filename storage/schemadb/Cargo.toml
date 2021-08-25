@@ -1,0 +1,28 @@
+[package]
+name = "schemadb"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets schemadb"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+once_cell = "1.7.2"
+dijets-config = { path = "../../config" }
+dijets-logger = { path = "../../common/logger" }
+dijets-metrics = { path = "../../common/metrics" }
+dijets-workspace-hack = { path = "../../common/workspace-hack" }
+
+[dependencies.rocksdb]
+version = "0.15.0"
+default-features = false
+features = ["lz4"]
+
+[dev-dependencies]
+byteorder = "1.4.3"
+proptest = "1.0.0"
+dijets-temppath = { path = "../../common/temppath" }

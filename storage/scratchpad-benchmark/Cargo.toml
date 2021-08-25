@@ -1,0 +1,30 @@
+[package]
+name = "scratchpad-benchmark"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets executor benchmark"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+itertools = { version = "0.10.0", default-features = false }
+rand = "0.8.3"
+rayon = "1.5.0"
+structopt = "0.3.21"
+
+dijetsdb = { path = "../dijetsdb" }
+dijetsdb-benchmark = { path = "../dijetsdb-benchmark" }
+dijets-config = { path = "../../config" }
+dijets-crypto = { path = "../../crypto/crypto" }
+dijets-genesis-tool = {path = "../../config/management/genesis", features = ["testing"] }
+dijets-infallible = { path = "../../common/infallible" }
+dijets-logger = { path = "../../common/logger" }
+dijets-types = { path = "../../types" }
+dijets-workspace-hack = { path = "../../common/workspace-hack" }
+executor-types = { path = "../../execution/executor-types" }
+scratchpad = { path = "..//scratchpad" }
+storage-interface = { path = "../storage-interface" }

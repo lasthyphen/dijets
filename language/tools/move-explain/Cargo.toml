@@ -1,0 +1,20 @@
+[package]
+name = "move-explain"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets Move abort code explanations"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+structopt = "0.3.21"
+move-command-line-common = { path = "../../move-command-line-common" }
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+move-core-types = { path = "../../move-core/types" }
+bcs = "0.1.2"
+
+[features]
+default = []

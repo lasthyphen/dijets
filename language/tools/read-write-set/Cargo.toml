@@ -1,0 +1,21 @@
+[package]
+name = "read-write-set"
+version = "0.1.0"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Read/write set inference for Move bytecode programs"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0.38"
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+move-binary-format = { path = "../../move-binary-format" }
+move-bytecode-utils = { path = "../move-bytecode-utils" }
+move-core-types = { path = "../../move-core/types" }
+move-model = { path = "../../move-model" }
+prover_bytecode = { path = "../../move-prover/bytecode", package="bytecode" }
+resource-viewer = { path = "../resource-viewer" }
+read-write-set-types = { path = "types" }

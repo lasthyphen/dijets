@@ -1,0 +1,41 @@
+[package]
+name = "vm-genesis"
+version = "0.1.0"
+edition = "2018"
+authors = ["Dijets Association <opensource@dijets.com>"]
+description = "Dijets vm genesis"
+repository = "https://github.com/dijets/dijets"
+homepage = "https://dijets.com"
+license = "Apache-2.0"
+publish = false
+
+[dependencies]
+anyhow = "1.0.38"
+once_cell = "1.7.2"
+rand = "0.8.3"
+
+bytecode-verifier = { path = "../../bytecode-verifier" }
+bcs = "0.1.2"
+dijets-config = { path = "../../../config" }
+dijets-crypto = { path = "../../../crypto/crypto" }
+dijets-state-view = { path = "../../../storage/state-view" }
+dijets-types = { path = "../../../types" }
+dijets-workspace-hack = { path = "../../../common/workspace-hack" }
+move-bytecode-utils = { path = "../move-bytecode-utils" }
+move-core-types = { path = "../../move-core/types" }
+move-vm-runtime = { path = "../../move-vm/runtime"}
+move-vm-types = { path = "../../move-vm/types" }
+dijets-framework = { path = "../../dijets-framework" }
+dijets-framework-releases = { path = "../../dijets-framework/releases" }
+dijets-transaction-builder = { path = "../../../sdk/transaction-builder"}
+move-binary-format = { path = "../../move-binary-format" }
+dijets-vm = { path = "../../dijets-vm" }
+
+[dev-dependencies]
+proptest = "1.0.0"
+proptest-derive = "0.3.0"
+dijets-proptest-helpers = { path = "../../../common/proptest-helpers" }
+
+[features]
+default = []
+fuzzing = ["dijets-types/fuzzing", "move-vm-types/fuzzing"]
