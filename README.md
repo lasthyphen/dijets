@@ -1,12 +1,10 @@
-> **Note to readers:** On December 1, 2020, the Libra Association was renamed to Diem Association. The project repos are in the process of being migrated. All projects will remain available for use here until the migration to a new GitHub Organization is complete.
-
 <a href="https://developers.diem.com">
-	<img width="200" src="./.assets/diem.png" alt="Diem Logo" />
+	<img width="200" src="./.assets/dijets.png" alt="Dijets Logo" />
 </a>
 
 ---
 
-[![Diem Rust Crate Documentation (main)](https://img.shields.io/badge/docs-main-59f)](https://diem.github.io/diem/)
+[![Dijets Rust Crate Documentation (main)](https://img.shields.io/badge/docs-main-59f)](https://diem.github.io/diem/)
 [![License](https://img.shields.io/badge/license-Apache-green.svg)](LICENSE)
 [![grcov](https://img.shields.io/badge/Coverage-grcov-green)](https://ci-artifacts.diem.com/coverage/unit-coverage/latest/index.html)
 [![test history](https://img.shields.io/badge/Test-History-green)](https://ci-artifacts.diem.com/testhistory/diem/diem/auto/ci-test.yml/index.html)
