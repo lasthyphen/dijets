@@ -1,0 +1,68 @@
+{
+    "owner_account": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "652f27413456938eaa059f65231647cc"
+    },
+    "operator_account": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "586e5a7de4a7ba3012f07f508e86b5a4"
+    },
+    "owner": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "d014413e36fef7a5b4fea599a2e66d1447f6a9c12405d0b7d2f878f5aa7de6a4"
+    },
+    "fullnode_network": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "7175883a06efbd9220b6720fadb6179c7beec855db415e75e123dc922887e13d"
+    },
+    "execution": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "4b1730b62fe90adcec2f04460072d2aabb591249bbf0b6a5f8d4a83c2da2df13"
+    },
+    "waypoint": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "0:0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "operator": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "82f820a347b2672f281a0a1e9786961cc707d4a8aabb4a220f0ac97ead6ab9f6"
+    },
+    "validator_network": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "254fd8b2bc9fe20a76b69356a1646ab40586fbc3217478c65933946945d06a9f"
+    },
+    "validator_network_address_keys": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": {
+            "keys": {
+                "0": "GsQijef511k/iRBKKeFlmuVLypAjrO9VCb122FngjfM="
+            },
+            "current": 0
+        }
+    },
+    "safety_data": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": {
+            "epoch": 0,
+            "last_voted_round": 0,
+            "preferred_round": 0,
+            "one_chain_round": 0,
+            "last_vote": null
+        }
+    },
+    "consensus": {
+        "data": "GetResponse",
+        "last_update": 1630281417,
+        "value": "80a97fb4c9443befb57622ffdc68ac8d3dd2c0fb53725fef8e5da9509e7b1824"
+    }
+}

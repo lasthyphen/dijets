@@ -1,0 +1,109 @@
+{
+    "waypoint": {
+        "data": "GetResponse",
+        "last_update": 1630283696,
+        "value": "0:f2936f5238ecd5a289bd461ad9375267b54fbe3b4658cb9be38609325bd85b95"
+    },
+    "genesis-waypoint": {
+        "data": "GetResponse",
+        "last_update": 1630283696,
+        "value": "0:f2936f5238ecd5a289bd461ad9375267b54fbe3b4658cb9be38609325bd85b95"
+    },
+    "owner_account": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "652f27413456938eaa059f65231647cc"
+    },
+    "owner": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "7184e456dd907c60383b470861bc0ec1a15cdbe3ec71a9e6cd5f29752075be84"
+    },
+    "consensus": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "8db3dd88b8f5f529a862277ffb4ea06bd25b3f7932079771037996139d92e3ca"
+    },
+    "validator_network": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "f204ed0e20c4259b9cce1e6509e0acf1c83736c8bd327f140c42466f633afe8b"
+    },
+    "fullnode_network": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "c7bb99ea677ade6f34000469fcb463ce77cb09ff8fade816a3fde8eaede93a16"
+    },
+    "operator": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "2ffd135d92ef2861e539bcc5bdc56c4c11bb46af9a44d5f76ccc820c66782c47"
+    },
+    "operator_account": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "4d7fb724d31dcefa8cc6cf201f3d0216"
+    },
+    "safety_data": {
+        "data": "GetResponse",
+        "last_update": 1630288191,
+        "value": {
+            "epoch": 1,
+            "last_voted_round": 19520,
+            "preferred_round": 19518,
+            "one_chain_round": 19519,
+            "last_vote": {
+                "vote_data": {
+                    "proposed": {
+                        "epoch": 1,
+                        "round": 19520,
+                        "id": "62d6c7e033c4585d38a935a52c1bbe194c2f52a31791667fe00ec37dd619d182",
+                        "executed_state_id": "44586a06243790696bd412eaf6836a0677f134c0a5bbab3ece821cabca36e6d4",
+                        "version": 19526,
+                        "timestamp_usecs": 1630288191165127,
+                        "next_epoch_state": null
+                    },
+                    "parent": {
+                        "epoch": 1,
+                        "round": 19519,
+                        "id": "358bdbbba924df719a331eaa982e8991db6322f65d990539e160d32ca12727f7",
+                        "executed_state_id": "1b5fe42c8f83820b2726ec7b74bd694a286ca27d39080be4bfad951b948e4c18",
+                        "version": 19525,
+                        "timestamp_usecs": 1630288190935832,
+                        "next_epoch_state": null
+                    }
+                },
+                "author": "652f27413456938eaa059f65231647cc",
+                "ledger_info": {
+                    "commit_info": {
+                        "epoch": 1,
+                        "round": 19518,
+                        "id": "feb424edd32caa255714c3075cc63bc7c98a8dc5f00b9ae65a9afedc73d8f089",
+                        "executed_state_id": "79e6e448359f4757b05218d56185fb0b03bb267fed543fb28ffc1045fffa0005",
+                        "version": 19524,
+                        "timestamp_usecs": 1630288190703499,
+                        "next_epoch_state": null
+                    },
+                    "consensus_data_hash": "b9fca99a2af74dcfb824359df438d2310fa1525d88a5c385b11a44134dbf15bb"
+                },
+                "signature": "d6d226d430cf235b839c8c6a0ed18aaad9c4fb5908d75e0f6cdb5979bd2f58fa4081e02ca1cad93ef8e34282538c515fb74e35d743a43da89d640468429f3c08",
+                "timeout_signature": null
+            }
+        }
+    },
+    "execution": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": "a2eab96cb31d5390993f4dcde4e580e08c721c73d906f321aae646732db8f02c"
+    },
+    "validator_network_address_keys": {
+        "data": "GetResponse",
+        "last_update": 1630283695,
+        "value": {
+            "keys": {
+                "0": "zlAnJ6uMsE4WbikAa7Pt3NbenGwXJ27wsnTX9+sJR6I="
+            },
+            "current": 0
+        }
+    }
+}
